@@ -1,3 +1,1 @@
-export { getDomElement } from './lib.js'
-export { getRectFromView } from './lib.js'
-export { isScrollIntoView } from './lib.js'
+export { default as tools } from './lib.js'

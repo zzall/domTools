@@ -1,0 +1,15 @@
+{
+  "name": "testPackage",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "zzailianlian <240592864@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@zzailianlian/dom-tools": "^1.0.0"
+  }
+}
