@@ -10,6 +10,6 @@
   "author": "zzailianlian <240592864@qq.com>",
   "license": "MIT",
   "dependencies": {
-    "@zzailianlian/dom-tools": "^1.0.0"
+    "@zzailianlian/dom-tools": "^1.0.1"
   }
 }

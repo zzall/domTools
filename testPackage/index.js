@@ -1,3 +1,4 @@
-// import tools from '@zzailianlian/dom-tools'
+import tools from '@zzailianlian/dom-tools'
+import module from './js/index'
 
-console.log('hhhh')
+console.log('hhhh', tools, module)
