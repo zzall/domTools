@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prePublish": " np --no-cleanup --yolo --any-branch"
+    "publish": " np --no-cleanup --yolo --any-branch"
   },
   "keywords": [
     "javascript",
