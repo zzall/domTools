@@ -1,13 +1,13 @@
 {
   "name": "@zzailianlian/dom-tools",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": " np --no-cleanup --yolo --no-publish --any-branch"
   },
-    "publishConfig": {
+  "publishConfig": {
     "access": "public",
     "registry": "https://www.npmjs.com/package/@zzailianlian/dom-tools"
   },
