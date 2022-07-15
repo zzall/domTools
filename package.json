@@ -9,7 +9,8 @@
   },
   "keywords": [
     "javascript",
-    "tools"
+    "tools",
+    "dom"
   ],
   "homepage": "https://github.com/zzailianlian/domTools",
   "bugs": {
