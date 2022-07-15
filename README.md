@@ -1,5 +1,7 @@
 ## dom tools
 
+> 顾名思义 dom处理方法
+
 <p align="center">
     <a href="https://github.com/zzailianlian/domTools/blob/master/docs/readme_en.md">English</a>
     ·
@@ -7,9 +9,9 @@
     ·
 </p>
 
-> 顾名思义 dom处理方法
 
 
+:+1:
 
 ## 方法
 
