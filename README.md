@@ -1,9 +1,9 @@
 ## dom tools
 
 <p align="center">
-    <a href="/docs/readme_en.md">English</a>
+    <a href="https://github.com/zzailianlian/domTools/blob/master/docs/readme_en.md">English</a>
     ·
-    <a href="/docs/readme_cn.md">简体中文</a>
+    <a href="https://github.com/zzailianlian/domTools/blob/master/docs/readme_cn.md">简体中文</a>
     ·
 </p>
 
