@@ -112,3 +112,12 @@ getDomElement(document.querySelector('zzz'))
   * 开始触发监听事件
 * destroy
   * 移除监听事件
+  
+  
+  
+```diff
++ 开始学习
+- 放弃躺平。。
+```
+  
+  
