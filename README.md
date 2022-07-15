@@ -108,7 +108,9 @@ getDomElement(document.querySelector('zzz'))
   
   
   
+```diff
++ 开始学习
+- 放弃躺平。。
+```
   
   
-![http://www.baidu.com/img/bdlogo.gif][code-past]
-![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo")
