@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": " np --no-cleanup --yolo --no-publish --any-branch"
+    "prePublish": " np --no-cleanup --yolo --no-publish --any-branch"
   },
   "publishConfig": {
     "access": "public",
-    "registry": "https://www.npmjs.com/package/@zzailianlian/dom-tools"
+    "registry": "https://www.npmjs.com/"
   },
   "keywords": [
     "javascript",
