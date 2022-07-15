@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": " np --no-cleanup --yolo --no-publish --any-branch"
+  },
+    "publishConfig": {
+    "access": "public",
+    "registry": "https://www.npmjs.com/package/@zzailianlian/dom-tools"
   },
   "keywords": [
     "javascript",
@@ -15,5 +20,8 @@
     "url": "https://github.com/zzailianlian/domTools/issues"
   },
   "author": "zzailianlian",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "np": "^7.6.2"
+  }
 }
