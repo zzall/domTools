@@ -7,10 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prePublish": " np --no-cleanup --yolo --no-publish --any-branch"
   },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://www.npmjs.com"
-  },
   "keywords": [
     "javascript",
     "tools"
