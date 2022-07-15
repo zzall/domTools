@@ -1,12 +1,5 @@
 ## dom tools
 
-<p align="center">
-    <a href="/docs/readme_en.md">English</a>
-    ·
-    <a href="/docs/readme_cn.md">简体中文</a>
-    ·
-</p>
-
 > 顾名思义 dom处理方法
 
 
