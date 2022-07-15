@@ -116,8 +116,8 @@ getDomElement(document.querySelector('zzz'))
   
   
 ```diff
-+ 开始学习
-- 放弃躺平。。
++ 开始学习一丢丢。。
+- 放弃躺平一丢丢。。
 ```
   
   
