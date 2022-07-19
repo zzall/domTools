@@ -1,14 +1,13 @@
 ## dom tools
 
+> 顾名思义，dom处理方法，总结常用dom处理方法，像使用一般方法一样简单随意，随拿随用
+
 <p align="center">
     <a href="https://github.com/zzailianlian/domTools/blob/master/docs/readme_en.md">English</a>
     ·
     <a href="https://github.com/zzailianlian/domTools/blob/master/docs/readme_cn.md">简体中文</a>
     ·
 </p>
-
-> 顾名思义 dom处理方法
-
 
 
 ## 方法
