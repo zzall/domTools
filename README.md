@@ -9,7 +9,6 @@
     ·
 </p>
 
-
 ## 方法
 
 ### getDomElement(string|HTMLElement)
