@@ -25,10 +25,6 @@
     "email": "1809642355@qq.com"
   },
   "author": "zzailianlian <1809642355@qq.com>",
-  "funding": {
-    "type": "individual",
-    "url": "https://zzailianlian.github.io/#/fund"
-  },
   "license": "ISC",
   "devDependencies": {
     "http-server": "^14.1.1",
