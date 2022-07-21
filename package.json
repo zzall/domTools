@@ -1,6 +1,6 @@
 {
   "name": "@zzailianlian/dom-tools",
-  "version": "1.1.1-1",
+  "version": "1.1.1-2",
   "description": "dom处理方法，总结常用dom处理方法，像使用一般方法一样简单随意，随拿随用",
   "main": "index.js",
   "scripts": {
