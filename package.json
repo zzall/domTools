@@ -9,13 +9,24 @@
   "keywords": [
     "javascript",
     "tools",
-    "dom"
+    "dom",
+    "element",
+    "easy"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zzailianlian/domTools"
+  },
   "homepage": "https://github.com/zzailianlian/domTools",
   "bugs": {
-    "url": "https://github.com/zzailianlian/domTools/issues"
+    "url": "https://github.com/zzailianlian/domTools/issues",
+    "email": "1809642355@qq.com"
   },
-  "author": "zzailianlian",
+  "author": "zzailianlian <1809642355@qq.com>",
+  "funding": {
+    "type" : "individual",
+    "url" : "https://zzailianlian.github.io/#/fund"
+  },
   "license": "ISC",
   "devDependencies": {
     "np": "^7.6.2"
