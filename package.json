@@ -11,15 +11,13 @@
   "keywords": [
     "javascript",
     "tools",
-    "dom",
-    "element",
-    "easy"
+    "dom"
   ],
   "homepage": "https://github.com/zzailianlian/domTools",
   "bugs": {
     "url": "https://github.com/zzailianlian/domTools/issues"
   },
-  "author": "zzailianlian <1809642355@qq.com>",
+  "author": "zzailianlian",
   "license": "ISC",
   "devDependencies": {
     "http-server": "^14.1.1",
