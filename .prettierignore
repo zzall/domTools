@@ -1,0 +1,4 @@
+testPackage
+node_modules
+**/*.md
+\.**

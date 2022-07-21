@@ -1,9 +1,8 @@
-
 ## Dom Tools
 
-> As the name suggests DOM processing method
+As the name suggests, the DOM processing method, summarize the commonly used DOM processing method, as simple and casual as using the general method, casual use, casual use
 
-
+The project is still under construction, and I look forward to the joint contribution of people with aspirations!
 
 ## method
 
@@ -68,14 +67,14 @@ return
 
 * `` `javascript
   {{
-          TOP: 0,
-          bottom: 0,
-          left: 0,
-          Right: 0,
-          Height: Curdom.offsetheight,
-          width: Curdom.offsetWidth,
-          EL: Curdom,
-        }
+    TOP: 0,
+    bottom: 0,
+    left: 0,
+    Right: 0,
+    Height: Curdom.offsetheight,
+    width: Curdom.offsetWidth,
+    EL: Curdom,
+  }
   `` `
 
   
@@ -103,6 +102,109 @@ Payment:
 return
 
 * register ()
+
   * Start triggering monitoring events
+
 * Destroy
+
   * Removal monitoring incident
+
+    
+
+### GettargetNodebysourceDom (Options)
+
+Get the parent element that meets the conditions according to the source dom: `el`. If it exists, it returns, otherwise it will return to` null`,
+
+Common scenes:
+
+Get a parent element based on CLICK's `E.Target`, and do the corresponding operation, or if there is a parent element, do another logical operation
+
+Payment:
+
+* Options
+
+  * EL
+
+    * Same as GetDomelement's Payment
+
+  * Include
+
+    * Class
+      * Class you want to include
+    * ID
+      * ID you want to include
+    * Attrs
+      * Array containing custom attributes
+      * Sub -attribute:
+        * Key
+          * KEY of the custom attribute to be included
+        * Value
+          * Value of the custom attributes to be contained
+    * iScross
+      * Whether you meet the conditions of class, IDRS constraints at the same time
+      * It needs to be satisfied at the same time when True
+      * Seting any condition for false
+
+  * Exclude
+    * Class
+      * Class to be eliminated
+    * ID
+      * ID to be eliminated
+    * Attrs
+      * Array containing custom attributes
+      * Sub -attribute:
+        * Key
+          * KEY of the custom attribute to be included
+        * Value
+          * Value of the custom attributes to be contained
+    * iScross
+      * Whether you meet the conditions of class, IDRS constraints at the same time
+      * It needs to be satisfied at the same time when True
+      * Seting any condition for false
+
+Example:
+
+`` `javascript
+gettargetNodeBysourceDom ({{{
+  EL: 'Child',
+  include: {{
+    Class: 'Parent2',,
+    // ID: 'Parent2-EXCLUE-ATTR1-ATTR2',
+    Attrs: [{{{
+      Key: 'Attr1',
+      Value: 'Attr1'
+    }],,,
+    iscross: true
+  },
+  exclude: {{
+    // Class: 'Inclu',
+    // ID: 'Parent2-EXCLUE-ATTR1-ATTR2',
+    Attrs: [{{{
+      Key: 'Attr1',
+      Value: 'Attr1'
+    }],,,
+    iscross: false
+  }
+})
+`` `
+
+
+
+####
+
+Next I have to do:
+
+1. Turn to TS
+2. Integrated lint
+3. Add Babel and the static target resources generated
+4. Integrated Lint-Stage
+5. Integrated CI/CD
+
+
+
+##
+
+`` `diff
++ Start learning. Essence
+-An abandoning lying flat. Essence
+`` `

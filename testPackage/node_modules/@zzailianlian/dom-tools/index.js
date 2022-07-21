@@ -1,1 +1,3 @@
-export { default as tools } from './lib.js'
+import tools from './lib.js'
+
+export default tools

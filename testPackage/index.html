@@ -11,8 +11,20 @@
 <body>
   <div class="hhh">111</div>
   <div class="test"></div>
-  <script src="/index.js"  type="module"></script>
-  <!-- <script src="/index.js" type="module"></script> -->
+  <div id="test"></div>
+  <div class="parent1">
+    <div class="parent2 exclu inclu">
+      <div id="parent2-exclue-attr1-attr2" class="parent2 exclu" attr1="attr1" attr2="attr2">
+        <div class="parent2 inclu">
+          <div class="parent3">
+            <div class="child"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="/index.js"  type="module"></script> -->
+  <script src="/testPackage/index.js" type="module"></script>
 </body>
 
 </html>
