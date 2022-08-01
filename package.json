@@ -1,27 +1,34 @@
 {
   "name": "@zzailianlian/dom-tools",
   "version": "1.2.0",
-  "description": "dom处理方法，总结常用dom处理方法，像使用一般方法一样简单随意，随拿随用",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "publish": " np --no-cleanup --yolo --any-branch",
-    "local-test": "http-server",
-    "prettier": "prettier -w lib.js"
+    "publish": " np --no-cleanup --yolo --any-branch"
   },
   "keywords": [
     "javascript",
     "tools",
-    "dom"
+    "dom",
+    "element",
+    "easy"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zzailianlian/domTools"
+  },
   "homepage": "https://github.com/zzailianlian/domTools",
   "bugs": {
-    "url": "https://github.com/zzailianlian/domTools/issues"
+    "url": "https://github.com/zzailianlian/domTools/issues",
+    "email": "1809642355@qq.com"
   },
-  "author": "zzailianlian",
+  "author": "zzailianlian <1809642355@qq.com>",
+  "funding": {
+    "type" : "individual",
+    "url" : "https://zzailianlian.github.io/#/fund"
+  },
   "license": "ISC",
   "devDependencies": {
-    "http-server": "^14.1.1",
-    "np": "^7.6.2",
-    "prettier": "2.7.1"
+    "np": "^7.6.2"
   }
 }
