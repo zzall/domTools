@@ -188,7 +188,64 @@ getTargetNodeBySourceDom({
 })
 ```
 
+### imageToBase64(imgUrl,format)
 
+根据图片的url生成base64
+
+入参：
+
+* `imgeUrl` 
+  * String 图片url
+* `format`
+  * 要转换的图片格式
+  * 默认为`'image/png'`
+
+返回：
+
+* 返回一个`Promise`
+* `res`为生成的`base64`字符串
+
+### loadScript(src, opts = {})
+
+动态生成script并放入到head标签的内部，返回一个可提供回调的Promise，同时缓存该Promise实例
+
+入参：
+
+* src
+  * string script标签的src
+* opts
+  * object script标签的属性
+
+返回：
+
+* Promise
+
+### loadCSSCode(code)
+
+已内联的形式将css code渲染到style标签中，并塞入到head标签的尾部
+
+入参：
+
+* code
+  * string css代码字符串
+
+### loadCSS(href)
+
+动态生成link标签，加载指定css并将link标签放入到head尾部
+
+入参：
+
+* href
+  * string 要加载的css href
+
+### loadImage(src)
+
+加载指定src的图片资源并将生成img标签通过Promise返回，同时缓存该Promise实例
+
+入参:
+
+* src
+  * string 图片的src
 
 ## 预计要做
 
@@ -208,4 +265,3 @@ getTargetNodeBySourceDom({
 + 开始学习一丢丢。。
 - 放弃躺平一丢丢。。
 ```
-

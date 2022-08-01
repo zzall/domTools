@@ -20,9 +20,9 @@ export function getDomElement(domstr) {
     ['.', '#'].includes(domstr.substr(0, 1))
       ? (dom = document.querySelector(domstr))
       : (dom =
-          document.querySelector(`${domstr}`) ||
-          document.querySelector(`#${domstr}`) ||
-          document.querySelector(`.${domstr}`));
+        document.querySelector(`${domstr}`) ||
+        document.querySelector(`#${domstr}`) ||
+        document.querySelector(`.${domstr}`));
   }
   return dom;
 }
@@ -129,10 +129,10 @@ export function getRectFromView(domstr) {
 export function mouseMoveObsever(options) {
   const { el, moveLeft, moveRight, moveTop, moveBottom, once } = {
     el: null,
-    moveLeft: () => {},
-    moveRight: () => {},
-    moveTop: () => {},
-    moveBottom: () => {},
+    moveLeft: () => { },
+    moveRight: () => { },
+    moveTop: () => { },
+    moveBottom: () => { },
     once: true,
     ...options,
     el: getDomElement(options.el),
@@ -319,9 +319,134 @@ const getTargetNodeBySourceDom = (options) => {
   }
 };
 
+// 将img转成base64
+const imageToBase64 = (url, outputFormat) => {
+  return new Promise((resolve) => {
+    let canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const img = new window.Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      canvas.height = img.height;
+      canvas.width = img.width;
+      ctx.drawImage(img, 0, 0);
+      const dataURL = canvas.toDataURL(outputFormat || 'image/png');
+      resolve(dataURL);
+      canvas = null;
+    };
+    img.src = url;
+  });
+}
+
+// 缓存的promise实例，后续倘若请求到同一个资源，则返回之前已加载的资源
+const loadPromises = {};
+
+/**
+ * 动态生成script并放入到head标签的内部，返回一个可提供回调的Promise
+ * 由于是动态通过js加载的资源，因此放到head标签上也不会印象页面渲染速度
+ * @param {string} src script标签的src
+ * @param {object} opts script标签的属性
+ * @returns Promise
+ */
+const loadScript = (src, opts = {}) => {
+  if (loadPromises[src]) {
+    return loadPromises[src];
+  }
+  const promise = (loadPromises[src] = new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.type = opts.type || 'text/javascript';
+    script.charset = opts.charset || 'utf8';
+    script.async = 'async' in opts ? !!opts.async : true;
+    script.src = src;
+    if (opts.attrs) {
+      for (var attr in opts.attrs) {
+        script.setAttribute(attr, opts.attrs[attr]);
+      }
+    }
+    let loaded = false;
+    script.onload = script.onreadystatechange = function () {
+      if (
+        (script.readyState &&
+          script.readyState !== 'complete' &&
+          script.readyState !== 'loaded') ||
+        loaded
+      ) {
+        return false;
+      }
+      script.onload = script.onreadystatechange = null;
+      loaded = true;
+      resolve();
+    };
+    script.onerror = function () {
+      script.onload = script.onreadystatechange = null;
+      reject();
+    };
+    const head = document.getElementsByTagName('head')[0];
+    head.insertBefore(script, head.firstChild);
+  }));
+  return promise;
+}
+
+/**
+ * 已内联的形式将css code渲染到style标签中，并塞入到head标签的尾部
+ * @param {string} code css代码字符串
+ */
+const loadCSSCode = (code) => {
+  const style = document.createElement('style');
+  style.type = 'text/css';
+  style.rel = 'stylesheet';
+  //for Chrome Firefox Opera Safari
+  style.appendChild(document.createTextNode(code));
+  //for IE
+  //style.styleSheet.cssText = code;
+  const head = document.getElementsByTagName('head')[0];
+  head.appendChild(style);
+}
+
+/**
+ * 动态生成link标签，加载指定css并将link标签放入到head尾部
+ * @param {string} href 要加载的css href
+ */
+const loadCSS = (href) => {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = href;
+  const head = document.getElementsByTagName('head')[0];
+  head.appendChild(link);
+}
+
+/**
+ * 加载指定src的图片资源并将生成img标签通过Promise返回，同时缓存该Promise实例
+ * @param {string} src 图片的src
+ * @returns Promise
+ */
+const loadImage = (src) => {
+  if (loadPromises[src]) {
+    return loadPromises[src];
+  }
+  const promise = (loadPromises[src] = new Promise((resolve, reject) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.onload = function () {
+      resolve(img);
+    };
+    img.onerror = function (e) {
+      img.onload = null;
+      reject(e);
+    };
+  }));
+  return promise;
+}
+
+
 export default {
   getDomElement,
   getRectFromView,
   isScrollIntoView,
   getTargetNodeBySourceDom,
+  imageToBase64,
+  loadScript,
+  loadCSSCode,
+  loadCSS,
+  loadImage,
 };
