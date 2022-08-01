@@ -1,6 +1,6 @@
 {
   "name": "@zzailianlian/dom-tools",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,8 @@
   },
   "author": "zzailianlian <1809642355@qq.com>",
   "funding": {
-    "type" : "individual",
-    "url" : "https://zzailianlian.github.io/#/fund"
+    "type": "individual",
+    "url": "https://zzailianlian.github.io/#/fund"
   },
   "license": "ISC",
   "devDependencies": {
