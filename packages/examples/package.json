@@ -14,7 +14,7 @@
   "author": "zzailianlian <240592864@qq.com>",
   "license": "MIT",
   "dependencies": {
-    "@zzailianlian/dom-tools": "workspace:1.2.1"
+    "@zzailianlian/dom-tools": "workspace:*"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
