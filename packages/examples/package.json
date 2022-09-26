@@ -1,0 +1,31 @@
+{
+  "name": "test-package",
+  "version": "1.0.2",
+  "description": "",
+  "main": "index.js",
+  "module": "es6",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "http-server --cors -p 3333",
+    "watch": "webpack --watch",
+    "start": "webpack serve"
+  },
+  "keywords": [],
+  "author": "zzailianlian <240592864@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@zzailianlian/dom-tools": "workspace:1.2.1"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.1",
+    "node-sass": "^7.0.3",
+    "nodemon": "^2.0.20",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

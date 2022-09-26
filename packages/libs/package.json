@@ -1,12 +1,13 @@
 {
-  "name": "pnpm-monorepo",
+  "name": "@zzailianlian/dom-tools",
   "version": "1.2.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "publish": " np --no-cleanup --yolo --any-branch",
-    "start": "pnpm -F test-package start"
+    "build": "webpack"
   },
+  "sideEffects": false,
   "keywords": [
     "javascript",
     "tools",
@@ -30,6 +31,16 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "np": "^7.6.2"
+    "@babel/core": "^7.19.1",
+    "babel-loader": "^8.2.5",
+    "eslint-plugin-typescript": "^0.14.0",
+    "html-webpack-plugin": "^5.5.0",
+    "np": "^7.6.2",
+    "raw-loader": "^4.0.2",
+    "ts-lint": "^4.5.1",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.3",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }

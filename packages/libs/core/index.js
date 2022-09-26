@@ -1,3 +1,4 @@
+
 /**
  *
  * @param {string|HTMLElement}
@@ -236,7 +237,7 @@ export function mouseMoveObsever(options) {
  * }
  * @returns HTMLElement | Document | null
  */
-const getTargetNodeBySourceDom = (options) => {
+export function getTargetNodeBySourceDom(options) {
   const _options = {
     el: null,
     include: {
@@ -320,7 +321,7 @@ const getTargetNodeBySourceDom = (options) => {
 };
 
 // 将img转成base64
-const imageToBase64 = (url, outputFormat) => {
+export function imageToBase64(url, outputFormat) {
   return new Promise((resolve) => {
     let canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -348,7 +349,7 @@ const loadPromises = {};
  * @param {object} opts script标签的属性
  * @returns Promise
  */
-const loadScript = (src, opts = {}) => {
+export function loadScript(src, opts = {}) {
   if (loadPromises[src]) {
     return loadPromises[src];
   }
@@ -391,7 +392,7 @@ const loadScript = (src, opts = {}) => {
  * 已内联的形式将css code渲染到style标签中，并塞入到head标签的尾部
  * @param {string} code css代码字符串
  */
-const loadCSSCode = (code) => {
+export function loadCSSCode(code) {
   const style = document.createElement('style');
   style.type = 'text/css';
   style.rel = 'stylesheet';
@@ -407,7 +408,7 @@ const loadCSSCode = (code) => {
  * 动态生成link标签，加载指定css并将link标签放入到head尾部
  * @param {string} href 要加载的css href
  */
-const loadCSS = (href) => {
+export function loadCSS(href) {
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   link.href = href;
@@ -420,7 +421,7 @@ const loadCSS = (href) => {
  * @param {string} src 图片的src
  * @returns Promise
  */
-const loadImage = (src) => {
+export function loadImage(src) {
   if (loadPromises[src]) {
     return loadPromises[src];
   }

@@ -1,0 +1,8 @@
+{
+  "include": [ //放入打包的文件
+      "src/**/*.ts"
+  ], // 忽略的文件
+  "exclude": [
+      "node_modules",
+  ]
+}

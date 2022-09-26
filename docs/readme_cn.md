@@ -253,7 +253,7 @@ getTargetNodeBySourceDom({
 
 1. 转成ts
 2. 集成lint
-3. 添加babel与生成的静态目标资源
+3. ~~添加babel与生成的静态目标资源~~
 4. 集成lint-stage
 5. 集成ci/cd
 

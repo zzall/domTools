@@ -8,8 +8,8 @@ export {
   loadCSSCode,
   loadCSS,
   loadImage,
-} from './packages/libs/core';
+} from './core';
 
-import domTools from './packages/libs/core';
+import domTools from './core';
 
 export default domTools;
