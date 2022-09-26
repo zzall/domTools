@@ -4,7 +4,7 @@
 
 项目还在建设中，期待有志之士共同贡献力量！
 
-# $ npm config set sign-git-tag true dom-tools发布没办法生成tag？
+<!-- # $ npm config set sign-git-tag true dom-tools发布没办法生成tag？ -->
 # https://www.npmjs.com/package/np
 
 <p align="center">
