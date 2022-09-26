@@ -1,11 +1,8 @@
 {
-  "name": "pnpm-monorepo",
-  "version": "1.2.1",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "publish": " np --no-cleanup --yolo --any-branch",
-    "start": "pnpm -F test-package start"
+    "publish": "pnpm -F @zzailianlian/dom-tools np --no-cleanup --yolo --any-branch",
+    "start": "pnpm -F test-package start",
+    "build": "pnpm -F @zzailianlian/dom-tools build"
   },
   "keywords": [
     "javascript",
