@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "publish": "pnpm -F @zzailianlian/dom-tools np --no-cleanup --yolo --any-branch",
+    "publish": "pnpm -F @zzailianlian/dom-tools publish",
     "start": "pnpm -F test-package start",
     "build": "pnpm -F @zzailianlian/dom-tools build"
   },
