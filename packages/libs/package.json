@@ -33,7 +33,9 @@
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
     "eslint-plugin-typescript": "^0.14.0",
+    "glob": "^8.0.3",
     "html-webpack-plugin": "^5.5.0",
     "np": "^7.6.2",
     "raw-loader": "^4.0.2",

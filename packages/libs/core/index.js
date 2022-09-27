@@ -30,12 +30,12 @@ export function getDomElement(domstr) {
 
 // 是否移动到屏幕中
 export function isScrollIntoView(target, scrollContainter) {
-  // const scrollEl = this.getDomElement(scrollContainter || document.body);
-  const targetEl = this.getDomElement(target);
+  // const scrollEl = getDomElement(scrollContainter || document.body);
+  const targetEl = getDomElement(target);
   if (targetEl) {
     const wH = Math.min(window.innerHeight, window.outerHeight);
     const sH = document.body.scrollTop || document.documentElement.scrollTop;
-    const targetRect = this.getRectFromView(targetEl);
+    const targetRect = getRectFromView(targetEl);
     const currentViewRect = {
       bottom: sH + wH,
       top: sH,
@@ -68,7 +68,7 @@ export function isScrollIntoView(target, scrollContainter) {
     }
  */
 export function getRectFromView(domstr) {
-  const dom = this.getDomElement(domstr);
+  const dom = getDomElement(domstr);
   if (dom) {
     if (dom.getBoundingClientRect) {
       return {
