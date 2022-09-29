@@ -10,7 +10,7 @@ importers:
 
   packages/examples:
     specifiers:
-      '@zzailianlian/dom-tools': workspace:1.3.2
+      '@zzailianlian/dom-tools': workspace:*
       css-loader: ^6.7.1
       html-webpack-plugin: ^5.5.0
       http-server: ^14.1.1
